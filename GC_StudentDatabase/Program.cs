@@ -38,7 +38,7 @@ namespace GC_StudentDatabase
                     {
                         //searching list
                         index = SearchStudents(students, int.Parse(input));
-                        if (index > 0)
+                        if (index >= 0)
                         {
                             //calling method to display desired info
                             DisplayInfo(students, index);
@@ -139,7 +139,7 @@ namespace GC_StudentDatabase
                 {
                     if (students[i].LastName.Equals(input))
                     {
-                        Console.WriteLine("\nStudent had been found.");
+                        Console.WriteLine("\nStudent has been found.");
                         return i;
                     }
                 }
@@ -161,7 +161,7 @@ namespace GC_StudentDatabase
                         {
                             if (students[i].StudentNum.Equals(int.Parse(input)))
                             {
-                                Console.WriteLine("\nStudent had been found.");
+                                Console.WriteLine("\nStudent has been found.");
                                 return i;
                             }
                         }
